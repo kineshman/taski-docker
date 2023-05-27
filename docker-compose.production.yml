@@ -17,7 +17,7 @@ services:
       - static_volume:/backend_static
   frontend:
     image: kineshman/taski_frontend 
-    env_file: cd.env
+    env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
